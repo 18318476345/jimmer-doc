@@ -41,7 +41,7 @@ public List<Book> findBooksByStoreCityName(@Nullable String storeCityName) {
 <TabItem value="kotlin" label="Kotlin">
 
 ```kotlin
-fun findBooksByStoreCityName(name: storeCityName?): List<Book> =
+fun findBooksByStoreCityName(storeCityName: String?): List<Book> =
     sqlClient
         .createQuery(Book::class) {
             storeCityName?.takeIf { it.isNotEmpty() }?.let {
